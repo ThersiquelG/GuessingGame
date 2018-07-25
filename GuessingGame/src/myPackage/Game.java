@@ -22,5 +22,27 @@ public class Game {
 	}
 	
 	//mise à jour du tableau de boolean
+	boolean[] metAjour(char[] mot, boolean[] vu, char c) {
+		for(int i = 0; i<= 5; i++) {
+			if(mot[i] == c) {
+				vu[i] = true;
+			}
+		}
+		
+		return vu;
+	}
+	
+	//Fin de partie
+	boolean partieFinie(boolean vu[]) {
+		for(int i = 0; i<= 5; i++) {
+			if(vu[i] == true) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	
 	
 }
